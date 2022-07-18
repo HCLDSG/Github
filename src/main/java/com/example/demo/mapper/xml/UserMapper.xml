@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <select id="findAll" resultType="com.example.demo.entity.User">
+        select * from `user`
+    </select>
+
+    <select id="findByName" resultType="com.example.demo.entity.User">
+        select * from `user` where user_name = #{userName}
+    </select>
+    
+    <insert id="saveUser">
+        insert into `user`(user_name,user_password,user_role) values (#{userName},#{userPassword,#{userRole})
+    </insert>
+
+</mapper>
